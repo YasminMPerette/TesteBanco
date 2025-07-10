@@ -9,6 +9,7 @@ import java.sql.SQLException;
 public class LivroDAO {
 
     public void inserir(Livro livro) {
+
         String sql = "INSERT INTO livros (titulo, autor, ano_publicacao) VALUES (?, ?, ?)";
 
         try (Connection conn = Conexao.conectar();

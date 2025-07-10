@@ -33,6 +33,7 @@ public class Main {
                 funcionarioDAO.inserir(fun);
 
                 break;
+
             case 2:
                 System.out.print("Nome do funcionário: ");
                 String nomeFunc = sc.nextLine();
@@ -43,6 +44,7 @@ public class Main {
                 funcionarioDAO.atualizarSalario(nomeFunc, novoSalario);
 
                 break;
+
             case 3:
                 System.out.print("Nome do funcionário: ");
 
@@ -51,6 +53,7 @@ public class Main {
                 funcionarioDAO.deletar(nomeDel);
 
                 break;
+
             default:
                 System.out.println("Opção inválida.");
         }

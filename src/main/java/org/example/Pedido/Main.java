@@ -5,12 +5,17 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
+
         PedidoDAO pedidoDAO = new PedidoDAO();
 
         System.out.println("1. Inserir pedido");
+
         System.out.println("2. Atualizar total");
+
         System.out.println("3. Deletar pedido");
+
         int opcao = sc.nextInt();
         sc.nextLine();
 
@@ -28,20 +33,26 @@ public class Main {
 
                 Pedido pedido = new Pedido(cliente, data, total);
                 pedidoDAO.inserir(pedido);
+
                 break;
 
             case 2:
                 System.out.print("ID do pedido: ");
                 int idPedido = sc.nextInt();
+
                 System.out.print("Novo total: ");
                 double novoTotal = sc.nextDouble();
+
                 pedidoDAO.atualizarTotal(idPedido, novoTotal);
+
                 break;
 
             case 3:
                 System.out.print("ID do pedido a deletar: ");
                 int idDel = sc.nextInt();
+
                 pedidoDAO.deletar(idDel);
+
                 break;
 
             default:

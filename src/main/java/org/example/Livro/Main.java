@@ -31,6 +31,7 @@ public class Main {
 
                 Livro livro = new Livro(titulo, autor, ano);
                 livroDAO.inserir(livro);
+
                 break;
 
             case 2:
@@ -41,6 +42,7 @@ public class Main {
                 String novoAutor = sc.nextLine();
 
                 livroDAO.atualizarAutor(tituloAtualiza, novoAutor);
+
                 break;
 
             case 3:
@@ -49,6 +51,7 @@ public class Main {
 
                 String tituloDel = sc.nextLine();
                 livroDAO.deletar(tituloDel);
+
                 break;
 
             default:
